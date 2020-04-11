@@ -18,7 +18,6 @@ class DropDown extends React.Component {
                 <option value='Elliott'> Elliott </option>
                 <option value='Fart'> Fart </option>
                 <option value='Random'> Random </option>
-                <option value='Laugh'> Laugh </option>
              </select>
     }
 

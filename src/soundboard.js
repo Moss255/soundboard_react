@@ -31,7 +31,7 @@ class Soundboard extends React.Component {
     render() {
         return (
             <div className='container'>
-                <img src={title} className='title' alt='Soundboard'></img>
+                <img src={title} className='title justify-content-center' alt='Soundboard'></img>
                 <DropDown updateSelectedCategory={this.updateSelectedCategory} className='input-group input-group-lg'/>
                 <div className='btn-group-vertical container px-md-5 button-collection'>
                         <Play file={referenceFile[this.state.selectedCategory][0]} play={this.playClip}/>
