@@ -28,9 +28,30 @@
   color: #61dafb;
 }
 
-.SoundButton {
-  margin: 0.5rem 0;
+body {
+  background-color: #FF655C; 
 }
+
+.sound-button {
+  background-color: #43A5FF;
+  border-color: #1D6AB3;
+  color: white;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+
+.selector {
+  background-color: aliceblue;
+}
+
+.title {
+  width:100%;
+  margin: 5px;
+}
+
+.button-collection {
+  margin-top: 2em;
+}
+
 
 @keyframes App-logo-spin {
   from {

@@ -1,5 +1,4 @@
 import React from 'react';
-import icon from './Sound-Icon.png';
 import './App.css';
 
 class Play extends React.Component {
@@ -14,9 +13,7 @@ class Play extends React.Component {
     render() {
         if (this.props.file != null) {
             return (
-                <div className='container'>
-                    <input type='button' src={icon} onClick={this.play} value={this.props.file} className='btn btn-primary btn-lg justify-content-lg-center SoundButton'></input>
-                </div>
+                    <input type='button' onClick={this.play} value={this.props.file} className='btn btn-lg sound-button'></input>
             )
         } else {
             return null
