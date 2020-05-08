@@ -1,3 +1,33 @@
+# Soundboard React
+
+This was an attempt at using react to recreate a soundboard app that I originally tried to make using just Jquery.
+
+## Setup
+
+To use this app for yourself, you will need two things.
+
+A json file - preferably named 'files.json'. This will file name data and the categories to filter by.
+
+## Example
+
+{
+"Fart" : ["Fart.mp3", "Fart 2.mp3", "Bye.mp3"],
+...
+}
+
+The "Fart" is the category name, this has been pre-populated in the html.
+
+The three files in the array are used to name the buttons and to call the appropraite file.
+
+Currently, the program can only display a max of 9 sounds at a time, but this can easily be changed.
+
+### P.S. 
+
+Those looking for how to play audio in React can look at here as I found it was a bit of a nightmare to get working originally.
+
+Below is all what the readme spat out when I complied the app.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
