@@ -11,12 +11,12 @@ class DropDown extends React.Component {
     }
     render() {
         return <select
-        onChange={this.handleChange} className='input-group input-group-lg selector'>
+        onChange={this.handleChange} className='form-control-lg form-control'>
                 <option value='Karl'> Karl </option>
                 <option value='Harry'> Harry </option>
                 <option value='Matt'> Matt </option>
                 <option value='Elliott'> Elliott </option>
-                <option value='Fart'> Fart </option>
+                <option value='Other'> Other </option>
                 <option value='Random'> Random </option>
              </select>
     }

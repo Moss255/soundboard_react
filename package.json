@@ -2,7 +2,7 @@
   "name": "soundboard_react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jack-moss.uk/soundboard",
+  "homepage": ".",
   "dependencies": {
     "cra-template": "1.0.3",
     "jquery": "^3.4.1",

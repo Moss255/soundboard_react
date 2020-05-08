@@ -29,7 +29,9 @@
 }
 
 body {
-  background-color: #FF655C; 
+  background-image: url('BG.jpg'); 
+  background-size: cover;
+  background-position: center center;
 }
 
 .sound-button {
@@ -42,14 +44,25 @@ body {
 .selector {
   background-color: aliceblue;
 }
+.footer
+{
+  height:80px;
+  background-color:white;
+  width:100%;
+
+}
+.push {
+  height:50px;
+}
 
 .title {
   width:100%;
   margin: 5px;
+  max-height: 40%;
 }
 
 .button-collection {
-  margin-top: 2em;
+  min-height: calc(100vh - 20px);
 }
 
 

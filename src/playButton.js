@@ -13,7 +13,12 @@ class Play extends React.Component {
     render() {
         if (this.props.file != null) {
             return (
-                    <input type='button' onClick={this.play} value={this.props.file} className='btn btn-lg sound-button'></input>
+                <button onClick={this.play} className='list-group-item'>
+                    <div>
+                        <p> {this.props.file} </p>
+                    </div>
+                </button>
+                    //<input type='button'  value={this.props.file} className='btn btn-lg '></input>
             )
         } else {
             return null
