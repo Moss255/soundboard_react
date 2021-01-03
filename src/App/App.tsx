@@ -1,25 +1,23 @@
-import React, { Component } from 'react';
-import {Select, MenuItem, Container, Button} from '@material-ui/core';
+import React, { useEffect } from 'react';
 import axios from 'axios';
-import IAppState, {Category} from './IAppState';
+import Soundboard from '../Views/Soundboard/Soundboard';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-class App extends Component<any, IAppState> {
-    private audio:HTMLAudioElement;
-    constructor(props:IAppState) {
-      super(props);
+const App = () => {
+  useEffect(() => {
 
-      this.state = {
-        category: '',
-        data: []
-      }
+  }, [])
 
-      this.audio = new Audio();
-
-      this.handleClick = this.handleClick.bind(this);
-      this.handleSelectChange = this.handleSelectChange.bind(this);
-    }
-
-    componentDidMount = async () => {
+  return (
+    <Router basename='/soundboard'>
+      <Switch>
+        <Route path='/:selection' render = { (props) => <Soundboard {...props} />} />
+        <Route path='/' render = { (props) => <Soundboard {...props}/>} />
+      </Switch>
+    </Router>
+  )
+}
+    /* componentDidMount = async () => {
       const response = await axios.get(process.env.PUBLIC_URL + '/files.json');
 
       let newFiles:Category[] = [];
@@ -32,58 +30,6 @@ class App extends Component<any, IAppState> {
         return (file)
       });
       this.setState({data: newFiles});
-    }
-
-
-    
-    handleSelectChange = (event:React.ChangeEvent<{value: unknown | string}>) => {
-      this.setState({category: event.target.value as string})
-    }
-
-    handleClick = (value: string) => {
-      this.audio.src = process.env.PUBLIC_URL + '/audio/' + value;
-      this.audio.play();
-    }
-
-    render = () => {
-      return (
-        <div>
-          <Container>
-          <h1> SoundBoard </h1>
-          <Select
-          onChange={this.handleSelectChange}
-          value={this.state.category}
-          displayEmpty
-          >
-          <MenuItem value="">Please select a category</MenuItem>
-          {this.state.data.map(key => {
-            return (
-              <MenuItem key={key.categoryName} value={key.categoryName}>{key.categoryName}</MenuItem>
-            )
-          })}
-          </Select>
-  
-          <div>
-            {this.state.data.map(key => {
-              return (
-                key.categoryName === this.state.category &&
-                  key.filesCollection.map(file => {
-                    return (
-                      <Button size="large" value={file} onClick={() => {this.handleClick(file)}}>{file.substring(0, file.length - 4)}</Button>
-                    )
-                  })
-              )
-            })}
-          </div>
-          
-          </Container>
-          
-  
-  
-  
-        </div>
-      )
-    } 
-}
+    } */
 
 export default App;
